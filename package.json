@@ -4,7 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon index.js"
+    
+    "start": "node index.js",
+    "start:dev": "nodemon index.js"
   },
   "author": "navin@telusko",
   "license": "ISC",
