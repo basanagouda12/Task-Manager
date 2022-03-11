@@ -4,6 +4,7 @@ const url = 'mongodb+srv://basu12:basu12@cluster0-auzs2.mongodb.net/taskManager?
 
 const app = express()
 
+const port = process.env.PORT || 5000
 mongoose.connect(url, {useNewUrlParser:true})
 const con = mongoose.connection
 
@@ -22,6 +23,6 @@ app.use(express.json())
 const alienRouter = require('./routes/task')
 app.use('/tasks',alienRouter)
 
-app.listen(9000, () => {
+app.listen(port, () => {
     console.log('Server started')
 })
